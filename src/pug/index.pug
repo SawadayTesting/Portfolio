@@ -1,0 +1,133 @@
+//- タイトルと概要だけ変数化してあります 適宜編集して下さい
+//- パスは基本そのまま。下層ページを作る際に変更する 値:".."
+- var title = 'クリスタ中級編'
+- var pageDescription = 'クリスタ中級編を作成。'
+- var path = '.'
+doctype html
+html(lang="ja" prefix="og: http://ogp.me/ns#")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="description" content=pageDescription)
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		// 検索避けの設定
+		meta(meta name="robots" content="noindex,nofollow")
+		// twitter card,ogp tag
+		meta(meta name="twitter:card" content="summary_large_image")
+		meta(meta name="twitter:site" content="ユーザー名")
+		meta(meta property="og:title" content="クリスタ中級編")
+		meta(meta property="og:type" content="website")
+		meta(meta property="og:url" content="記事のURL")
+		meta(meta property="og:site_name" content="サイト名")
+		meta(meta property="og:image" content="画像URL")
+		meta(meta property="og:description" content="クリスタ中級編を作ってみたよ")
+		// Facebook用の記述
+		meta(property="fb:app_id" content="[app_id]")
+		title #{title}
+		link(rel="stylesheet" href=path + "/css/style.css")
+		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif|Noto+Serif+JP&display=swap")
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+		//script(src="js/main.js")
+	body
+		.ly_body_inner
+			include _header.pug
+			///.header
+			section.bl_MV
+				.bl_MV_container
+					h1.bl_MV_tit Design for Smile.
+					p.bl_MV_subTit.hp-tac 快適なオフィスを
+						br.sp-visible
+						| デザインする
+				//-スライダー全体を括るメインコンテナ
+				.swiper-container
+					//-全スライドをまとめるラッパー
+					.swiper-wrapper
+						.swiper-slide
+							img(src="img/fv-bgi_01@2x.jpg" alt="オフィスのイメージ")
+						.swiper-slide
+							img(src="img/fv-bgi_02@2x.jpg" alt="オフィスのイメージ2")
+						.swiper-slide
+							img(src="img/fv-bgi_03@2x.jpg" alt="オフィスのイメージ3")
+					///.swiper-wrapper
+				///.swiper-container
+			///.bl_MV
+			.ly_contentsWrapper
+				section.ly_concept#lk_concept
+					.ly_concept_inner
+						h2.el_lv2heading.hp-mb55 CONCEPT
+							span
+						h3.el_concept_subTit “働きたくなる空間”をデザインすることで
+							br.sp-hidden
+							| 人々を幸せにする。
+						.bl_concept_container
+							p.el_concept_copy.hp-mb30 私たちは、オフィスに特化した空間デザイン専門としております。その理由は、「働きたくなる空間で仕事ができれば多くの人を幸せにできるのではないか」と考えるためです。そんな想いの株式会社Cresta Designだからこそできる空間デザインを提供させていただきます。
+							p.bl_concept_img.hp-mb40
+							img(class="bl_concept_img" src="img/concept-image@2x.jpg" alt="デザインされた空間の画像")
+						///.bl_concept_container
+						p.el_footCopy.el_concept_footCopy Our Concept
+					///.ly_concept_inner
+				///.ly_concept
+				section.bl_works.hp-pt100#lk_works
+					h2.el_lv2heading.el_lv2heading__white.el_lv2heading__right.tab-mb80.pc-mb80 Works
+						span
+					.bl_works_boxContainer.sp-mb40.tab-mb80.pc-mb80
+						.bl_works_box
+							p.bl_works_img
+								img(class="el_works_img" src="img/card-img01@2x.jpg" alt="新規サイトの画像")
+							p.el_works_copy 新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。
+						///.bl_works_box
+						.bl_works_box
+							p.bl_works_img
+								img(class="el_works_img" src="img/card-img02@2x.jpg" alt="新規サイトの画像")
+							p.el_works_copy 新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。
+						///.bl_works_box
+						.bl_works_box
+							p.bl_works_img
+								img(class="el_works_img" src="img/card-img03@2x.jpg" alt="新規サイトの画像")
+							p.el_works_copy 新規サイトを公開しました。今回のサイトは白と黒を基調にしたミニマルなデザインになっています。
+						///.bl_works_box
+					//.bl_works_boxContainer
+					include _el_button.pug
+					p.el_footCopy.el_footCopy__left Our Works
+				///.bl_works
+				section.bl_service#lk_service
+					h2.el_service_tit.el_lv2heading.hp-mb80.hp-ml15 Service
+						span
+					.bl_service_container
+						.bl_service_box
+							p.el_service_copy Hearing
+							p.bl_service_img.uq-filter
+								a(href="#")
+									img(class="el_service_img" src="img/service-img01@2x.jpg" alt="Hearingへの画像")
+						///.bl_service_box
+						.bl_service_box
+							p.el_service_copy Planning
+							p.bl_service_img.uq-filter
+								a(href="#")
+									img(class="el_service_img" src="img/service-img02@2x.jpg" alt="Planningへの画像")
+						///.bl_service_box
+						.bl_service_box
+							p.el_service_copy Direction
+							p.bl_service_img.uq-filter
+								a(href="#")
+									img(class="el_service_img" src="img/service-img03@2x.jpg" alt="Directionへの画像")
+						///.bl_service_box
+					///.bl_service_container
+					p.el_footCopy.el_service_footCopy Our Service
+				///.bl_service
+				section.bl_contact.hp-mb0#lk_contact
+					h2.el_lv2heading.el_lv2heading__white.el_lv2heading__right.hp-pt100.hp-mb80 Contact
+						span
+					.bl_contact_inner
+						p.el_contact_copy.hp-tac.hp-mb30 お気軽にご相談ください。
+						include _el_button__contact.pug
+						p.el_footCopy.el_footCopy__left Contact us
+					///.bl_contact_inner
+				///.bl_contact
+			///.contentsWrapper
+			include _footer.pug
+			///.footer
+		///.ly_body_inner
+		script(src="js/header.js")
+		script(src="js/swiper.js")
+		script(src="js/main.js")
